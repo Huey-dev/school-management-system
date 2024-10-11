@@ -1,46 +1,37 @@
 import Pagination from "@/app/components/Pagination";
 import Table from "@/app/components/Table";
 import Tablesearch from "@/app/components/Tablesearch";
-import { role, studentsData } from "@/lib/data";
+import { examsData, role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Student = {
+type Exam = {
   id: number;
-  studentId: string;
-  name: string;
-  email?: string;
-  photo: string;
-  phone?: string;
-  grade: number
+  subject: string;
   class: string;
-  address: string;
+  teacher: string;
+  date: string;
 };
 const columns = [
   {
-    header: "Info",
-    accessor: "info",
+    header: "Subject name",
+    accessor: "name",
   },
   {
-    header: "Student ID",
-    accessor: "studentId",
+    header: "Class",
+    accessor: "class",
+    
+  },
+  {
+    header: "Teacher",
+    accessor: "teacher",
     className: "hidden md:table-cell",
   },
   {
-    header: "Grade",
-    accessor: "grade",
+    header: "Date",
+    accessor: "date",
     className: "hidden md:table-cell",
-  },
-  {
-    header: "Mobile",
-    accessor: "mobile",
-    className: "hidden lg:table-cell",
-  },
-  {
-    header: "Address",
-    accessor: "address",
-    className: "hidden lg:table-cell",
   },
   {
     header: "Actions",
@@ -48,33 +39,24 @@ const columns = [
   },
 ];
 const Page = () => {
-  const renderRow = (item: Student): JSX.Element => (
+  const renderRow = (item: Exam): JSX.Element => (
     <tr
       key={item.id}
       className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-purplelight"
     >
       <td className="flex items-center gap-4 p-4">
-        <Image
-          src={item.photo}
-          alt="teachers picture"
-          height={40}
-          width={40}
-          className="md:hidden xl:block w-10 h-10 rounded-full object-cover"
-        />
         <div className="fle flex-col">
-          <h3 className="font-semibold">{item.name}</h3>
-          <p className="text-xs text-gray-500">{item.class}</p>
+          <h3 className="font-semibold">{item.subject}</h3>
         </div>
       </td>
-      <td className="hidden md:table-cell">{item.studentId}</td>
-      <td className="hidden md:table-cell">{item.grade}</td>    
-      <td className="hidden md:table-cell">{item.phone}</td>
-      <td className="hidden md:table-cell">{item.address}</td>
+      <td>{item.class}</td>
+      <td className="hidden md:table-cell">{item.teacher}</td>
+      <td className="hidden md:table-cell">{item.date}</td>
       <td>
         <div className="flex items-center gap-2">
           <Link href={`/list/students/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center rounded-full bg-sky">
-              <Image src="/view.png" alt="view" width={16} height={16} />
+              <Image src="/edit.png" alt="view" width={16} height={16} />
             </button>
           </Link>
           {role === "admin" && (
@@ -91,7 +73,7 @@ const Page = () => {
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
       {/* TOP */}
       <div className="flex items-center justify-between">
-        <h1 className="hidden md:block text-lg font-semibold">All students</h1>
+        <h1 className="hidden md:block text-lg font-semibold">All exams</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <Tablesearch />
           <div className="flex items-center gap-4 self-end">
@@ -111,7 +93,7 @@ const Page = () => {
       </div>
       {/* LIST */}
       <div className="">
-        <Table data={studentsData} columns={columns} renderRow={renderRow} />
+        <Table data={examsData} columns={columns} renderRow={renderRow} />
       </div>
 
       {/* PAGINATION */}

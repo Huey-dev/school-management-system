@@ -777,6 +777,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 2,
@@ -785,6 +786,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 3,
@@ -793,6 +795,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 4,
@@ -801,6 +804,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 5,
@@ -809,6 +813,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 6,
@@ -817,6 +822,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 7,
@@ -825,6 +831,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 8,
@@ -833,6 +840,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 9,
@@ -841,6 +849,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
   {
     id: 10,
@@ -849,6 +858,7 @@ export const eventsData = [
     date: "2025-01-01",
     startTime: "10:00",
     endTime: "11:00",
+    supervisor: "John Doe"
   },
 ];
 
