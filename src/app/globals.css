@@ -3,17 +3,104 @@
 @tailwind utilities;
 
 .react-calendar {
-    width: 100% !important;
-    border: none !important;
-    font-family: "Inter", sans-serif !important;
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
 }
 .react-calendar__title--active {
-    background-color: #c3ebfa  !important;
-    color: black !important;
+  background-color: #c3ebfa !important;
+  color: black !important;
 }
 .react-calendar__navigation__label__labelText {
-    font-weight: 600 !important ;
+  font-weight: 600 !important ;
 }
-.react-calendar__month-view__weekdays {
-    text-decoration: none;
+.react-calendar__month-view__weekdays abbr {
+  text-decoration: none !important;
+}
+.react-calendar__navigation {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+/* react big calendar */
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: #f1f0ff !important;
+  margin-left: 2px !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: #fff !important;
+}
+.rbc-time-header {
+  display: none !important;
+}
+.rbc-time-content {
+  border: none !important;
+}
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+.rbc-event{
+    border: none !important;
+    color: black !important;
+    padding: 10px !important ;
+    margin: 10px !important;
+    width: 99% !important;
+}
+.rbc-event:nth-child(1){
+    background-color: skyblue !important;
+}
+.rbc-event:nth-child(2){
+    background-color: skyblue !important;
+}
+.rbc-event:nth-child(3){
+    background-color: #f8f4f8 !important;
+}
+.rbc-event:nth-child(4){
+    background-color: #c3ebfa !important;
+}
+.rbc-event:nth-child(5){
+    background-color: #f7fdff !important;
+}
+.rbc-event:nth-child(6){
+    background-color: rgb(240, 229, 240) !important;
+}
+.rbc-event:nth-child(7){
+    background-color: rgb(52, 150, 142) !important;
+}
+.rbc-event:nth-child(8){
+    background-color: rgb(231, 219, 104) !important;
+}
+
+.rbc-event-label {
+    color: gray !important;
+    margin-bottom: 5px;
 }

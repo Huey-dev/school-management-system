@@ -1,6 +1,4 @@
 "use client";
-
-import { time } from "console";
 import Image from "next/image";
 import { useState } from "react";
 import Calendar from "react-calendar";
